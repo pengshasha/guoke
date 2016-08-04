@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>仿果壳网站</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="msapplication-tap-highlight" content="no" />
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.2.7.min.css">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+<body>
+	<header class="nav">
+		<span class="nav-icon"></span>
+		<h1>仿果壳网</h1>
+		<span class="search-icon"></span>
+		<span class="user-icon"></span>
+		<ul class="meau">
+			<li><a href="gk.html">首页</a></li>
+			<li><a href="page-list.html">小组</a></li>
+			<li><a href="page-list.html">问答</a></li>
+			<li><a href="kx-page.html">科学人</a></li>
+			<li><a href="logo.html">登录</a></li>
+		</ul>
+	</header>
+	<div class="list-container">
+		<form>
+			<input type="text" id="seacher" placeholder="搜索" style="display:none">
+		</form>
+		<h2>小组热贴</h2>
+		<ul>
+			<li>
+				<a href="javascript:void(0)">给你一个做地坛庙会摊主的机会听候处理给你一个做地坛庙会摊主的机会听候处理给你一个做地坛庙会摊主的机会听候处理</a>
+				<img src="images/list1.jpg">
+				<div class="autor"><span>工非机动车</span>发表于<span>KDY</span><span>10</span>回应</div>
+			</li>
+			<li>
+				<a href="javascript:void(0)">给你一个做地坛庙会摊主的机会听候处理</a>
+				<img src="images/list2.jpg">
+				<div class="autor"><span>工非机动车</span>发表于<span>KDY</span><span>10</span>回应</div>
+			</li>
+			<li>
+				<a href="javascript:void(0)">给你一个做地坛庙会</a>
+				<img src="images/list3.jpg">
+				<div class="autor"><span>工非机动车</span>发表于<span>KDY</span><span>10</span>回应</div>
+			</li>
+			<li>
+				<a href="javascript:void(0)">给你一个做地坛庙会摊主的机会听候处理给你一个做地坛庙会摊主的机会听候处理给你一个做地坛庙会摊主的机会听候处理</a>
+				<img src="images/list1.jpg">
+				<div class="autor"><span>工非机动车</span>发表于<span>KDY</span><span>10</span>回应</div>
+			</li>
+
+		</ul>
+	</div>
+	<footer>
+		<span class="more-btn">加载更多...</span>
+	</footer>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript">
+			var meau=$(".meau");
+		$(".nav-icon").on("tap",function(){
+			if(meau.offset().left<0){
+				meau.css("transform","translate(0,0)");
+			}else{
+				meau.css("transform","translate(-180px,0)");
+			}
+			
+		})
+		$(".search-icon").on("tap",function(){
+			$("#seacher").toggle();
+		})
+		$(".more-btn").on("tap",function(){
+			var _this=$(this);
+			_this.html("<div class='more-icon'></div>");
+			setTimeout(function(){
+				_this.html("已加载");
+			}, 2000);
+		})
+		$(".user-icon").on("tap",function(){
+			window.location.href="logo.html";
+		});
+	</script>
+</body>
+</html>
